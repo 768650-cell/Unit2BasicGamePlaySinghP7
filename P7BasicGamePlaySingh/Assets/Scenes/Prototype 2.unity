@@ -702,6 +702,9 @@ MonoBehaviour:
   - {fileID: 7446376727574034887, guid: d1e4c5aed943a0747b95d2864b661af7, type: 3}
   - {fileID: 8725768922664575513, guid: 4e767e47ebfe76c4eb70a387de290877, type: 3}
   - {fileID: 2670787065850865606, guid: 4056d75cf2a1f4c4e91df8ca5f0c720b, type: 3}
+  sideSpawnMinZ: 3
+  sideSpawnMaxZ: 15
+  sideSpawnX: 20
 --- !u!4 &1914401512
 Transform:
   m_ObjectHideFlags: 0
@@ -711,7 +714,38 @@ Transform:
   m_GameObject: {fileID: 1914401510}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.54020053, y: -0.3497696, z: 1.9323301}
+  m_LocalPosition: {x: -16.23, y: 0.21, z: 1.9323301}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &2054836182
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2054836183}
+  m_Layer: 0
+  m_Name: FoodSpawnPosition
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2054836183
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2054836182}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 1.5, z: 1.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -770,9 +804,9 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 484272291588769402, guid: f8abbdd178867d2419ba9feb6ff2cba0, type: 3}
-      propertyPath: projectilePrefab
+      propertyPath: projectileSpawnPoint
       value: 
-      objectReference: {fileID: 2847947385250116347, guid: 2628a5a68317eab4da2de06d7372fc43, type: 3}
+      objectReference: {fileID: 2054836183}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -787,3 +821,4 @@ SceneRoots:
   - {fileID: 992285706}
   - {fileID: 3734631790382010164}
   - {fileID: 1914401512}
+  - {fileID: 2054836183}
