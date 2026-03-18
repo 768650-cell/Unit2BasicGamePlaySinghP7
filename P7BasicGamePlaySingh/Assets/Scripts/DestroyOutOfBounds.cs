@@ -3,9 +3,9 @@ using UnityEngine;
 public class DestroyOutOfBounds : MonoBehaviour
     {
 
-    public float topBound = 30;
-    public float lowerBound = -10;
-    private float sideBound = 30;
+    public float LeftLimit = 33;
+    public float bottomLimit = 10;
+   
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -17,24 +17,16 @@ public class DestroyOutOfBounds : MonoBehaviour
     void Update()
     {
         // If an object goes pass the players view in the game, remove that object
-        if (transform.position.z > topBound)
+        if (transform.position.x < -LeftLimit)
         {
+            
             Destroy(gameObject);
         }
-        else if (transform.position.z < lowerBound) 
+        else if (transform.position.y < bottomLimit)
         {
             Debug.Log("Game Over!");
             Destroy(gameObject);
         }
-        else if (transform.position.x > sideBound) 
-        { 
-            Debug.Log("Game Over!"); 
-            Destroy(gameObject); 
-        }
-        else if (transform.position.x < -sideBound) 
-        { 
-            Debug.Log("Game Over!"); 
-            Destroy(gameObject); 
-        }
+        
     }
 }
